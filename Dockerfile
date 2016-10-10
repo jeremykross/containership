@@ -3,9 +3,7 @@ FROM mhart/alpine-node:6.3.0
 MAINTAINER ContainerShip Developers <developers@containership.io>
 
 # install required packages
-RUN apk --update add build-base git python-dev ruby-dev ruby-irb ruby-bundler ruby-rdoc ca-certificates libffi-dev
-
-RUN gem install ohai
+RUN apk --update add build-base git python-dev ruby-dev ruby-irb ruby-bundler ruby-rdoc ca-certificates libffi-dev && gem install ohai
 
 # create /app and add files
 WORKDIR /app
